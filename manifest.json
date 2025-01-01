@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Google Tasks & Calendar Extension",
+    "version": "1.0",
+    "description": "Integrates Google Tasks and Google Calendar into your browser.",
+    "permissions": [
+      "identity",
+      "storage",
+      "https://www.googleapis.com/"
+    ],
+    "oauth2": {
+      "client_id": "959270308026-up25u4j8gb67f0gj9noum2sooo13q0l3.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/tasks.readonly",
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ]
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["https://www.googleapis.com/*"],
+    "action": {
+      "default_popup": "dashboard.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+  

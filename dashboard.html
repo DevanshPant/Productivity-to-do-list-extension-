@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compact Productivity Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="extension-widget">
+    <div id="widget-header" class="drag-handle" aria-label="Dashboard Header">
+      <h1>Dashboard</h1>
+      <button id="close-widget" aria-label="Close Widget">X</button>
+    </div>
+    <div id="widget-content" role="main">
+      <button class="arrow" id="left-arrow" aria-label="Previous">&larr;</button>
+      <div id="carousel">
+        <!-- To-Do List -->
+        <div class="carousel-item" id="todo" role="region" aria-labelledby="todo-title">
+          <h2 id="todo-title">To-Do List</h2>
+          <hr>
+          <ul id="todo-list" class="content-list">
+            <!-- Task items will be added here dynamically -->
+          </ul>
+          <form id="add-task-form">
+            <input type="text" id="new-task" placeholder="New Task" required aria-label="New Task"/>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+
+        <!-- Calendar -->
+        <div class="carousel-item" id="calendar" role="region" aria-labelledby="calendar-title">
+          <h2 id="calendar-title">Calendar</h2>
+          <hr>
+          <div id="calendar-container"></div>
+        </div>
+
+        <!-- Stopwatch -->
+        <div class="carousel-item" id="stopwatch" role="region" aria-labelledby="stopwatch-title">
+          <h2 id="stopwatch-title">Stopwatch</h2>
+          <hr>
+          <p id="stopwatch-display">00:00:00</p>
+          <button id="start-stopwatch">Start</button>
+          <button id="stop-stopwatch">Stop</button>
+          <button id="reset-stopwatch">Reset</button>
+        </div>
+      </div>
+      <button class="arrow" id="right-arrow" aria-label="Next">&rarr;</button>
+    </div>
+    <div id="app-logos">
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="youtube.png" alt="YouTube"></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="twitter.png" alt="Twitter"></a>
+      <a href="https://web.whatsapp.com" target="_blank" aria-label="WhatsApp"><img src="whatsapp.png" alt="WhatsApp"></a>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
